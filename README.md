@@ -1,3 +1,4 @@
+<img width="1920" height="1080" alt="Screenshot 2026-06-15 172130" src="https://github.com/user-attachments/assets/8667f545-572b-4a9f-bf8f-dad69f6ce23b" />
 # ReviewInsight AI
 
 A portfolio-grade, SaaS-style AI Review Analysis Platform built from scratch using only free and open-source technologies. It automatically detects schema headers from uploaded review files, executes natural language processing (NLP) to classify review sentiment, infers missing star ratings, extracts key customer discussion themes, and populates a high-end glassmorphism dashboard.
@@ -24,6 +25,8 @@ A portfolio-grade, SaaS-style AI Review Analysis Platform built from scratch usi
 - **Database**: SQLite.
 
 ---
+<img width="1920" height="1080" alt="Screenshot 2026-06-15 172149" src="https://github.com/user-attachments/assets/5684eb78-edf8-42cd-9996-4660c5608ca5" />
+<img width="1920" height="1080" alt="Screenshot 2026-06-15 172206" src="https://github.com/user-attachments/assets/7250be3d-bcc7-4d3e-90bd-a3752ee07b9b" />
 
 ## 📂 Project Structure
 
