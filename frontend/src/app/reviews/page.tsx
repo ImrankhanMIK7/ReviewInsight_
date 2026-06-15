@@ -15,6 +15,7 @@ export default function ReviewsPage() {
   const [reviews, setReviews] = useState<ReviewItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [hasRunId, setHasRunId] = useState<boolean>(true);
   
   // Search & Filter State
   const [search, setSearch] = useState("");
@@ -29,10 +30,12 @@ export default function ReviewsPage() {
   const fetchReviewsList = () => {
     const runId = localStorage.getItem("selectedRunId");
     if (!runId) {
+      setHasRunId(false);
       setLoading(false);
       return;
     }
-
+    
+    setHasRunId(true);
     setLoading(true);
     getRunReviews(runId, search, sentiment, rating, page, 8)
       .then((res) => {
@@ -82,6 +85,18 @@ export default function ReviewsPage() {
       </div>
     );
   };
+
+  if (!hasRunId) {
+    return (
+      <div className="max-w-md mx-auto text-center py-20 flex flex-col items-center gap-4">
+        <div className="p-4 rounded-full bg-zinc-900 text-zinc-500 border border-zinc-800">
+          <MessageSquare className="h-8 w-8 text-zinc-400" />
+        </div>
+        <h2 className="text-lg font-bold text-zinc-200">No Dataset Uploaded</h2>
+        <p className="text-sm text-zinc-400">Please upload a review file first to view the review explorer.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col gap-6">

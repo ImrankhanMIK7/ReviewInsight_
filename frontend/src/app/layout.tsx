@@ -138,9 +138,10 @@ export default function RootLayout({
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.path;
-              const isDisabled = item.requiresRun && !selectedRunId;
-              
-              if (isDisabled) return null;
+
+              // We always show all navigation items to make the app features discoverable.
+              // If there is no run, the individual pages show a clean "No Dataset Uploaded" call-to-action.
+
 
               return (
                 <Link
