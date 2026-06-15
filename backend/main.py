@@ -5,7 +5,12 @@ import pandas as pd
 import json
 import uuid
 import io
+import sys
+import os
 from typing import Optional, List, Dict, Any
+
+# Ensure backend directory is in sys.path for Render deployment
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from utils.detector import detect_columns
 from utils.cleaner import clean_data
